@@ -1,0 +1,23 @@
+﻿@model KYC
+@{
+    ViewData["Title"] = "Edit KYC";
+}
+<h2>Edit KYC</h2>
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+    <label> Name:</label>
+    <input asp-for="Name" class="form-control" required />
+    <label> Address:</label>
+    <input asp-for="Address" class="form-control" required />
+    <label> Phone:</label>
+    <input asp-for="Phone" class="form-control" required />
+    <label>Email:</label>
+    <input asp-for="Email" class="form-control" required type="email" />
+    <label>Province:</label>
+    <input asp-for="Province" class="form-control" required />
+    <label> District:</label>
+    <input asp-for="District" class="form-control" required />
+    <label> VDC:</label>
+    <input asp-for="VDC" class="form-control" required />
+    <button type="submit">Save Changes</button>
+</form>

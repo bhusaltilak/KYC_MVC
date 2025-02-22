@@ -1,0 +1,16 @@
+﻿@model KYC
+@{
+    ViewData["Title"] = "Submission Successful";
+}
+<h2>Submission Successful</h2>
+<p>Your details have been submitted successfully.</p>
+<p><strong>Name:</strong> @Model.Name</p>
+<p><strong>Address:</strong> @Model.Address</p>
+<p><strong>Phone:</strong> @Model.Phone</p>
+<p><strong>Email:</strong> @Model.Email</p>
+<p><strong>Province:</strong> @Model.Province</p>
+<p><strong>District:</strong> @Model.District</p>
+<p><strong>VDC:</strong> @Model.VDC</p>
+
+<a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Edit</a>
+<a asp-action="Dashboard" class="btn btn-secondary">Go to Dashboard</a>

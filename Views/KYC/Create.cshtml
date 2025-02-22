@@ -1,0 +1,63 @@
+﻿@model KYC
+@{
+    ViewData["Title"] = "KYC Form";
+}
+
+<h2>KYC Form</h2>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger">
+        @Html.ValidationSummary()
+    </div>
+}
+
+<form asp-action="Create" method="post">
+    <div>
+        <label>Name:</label>
+        <input asp-for="Name" class="form-control" required />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label>Address:</label>
+        <input asp-for="Address" class="form-control" required />
+        <span asp-validation-for="Address" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label>Phone:</label>
+        <input asp-for="Phone" class="form-control" required />
+        <span asp-validation-for="Phone" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label>Email:</label>
+        <input asp-for="Email" class="form-control" required type="email" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label>Province:</label>
+        <input asp-for="Province" class="form-control" required />
+        <span asp-validation-for="Province" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label>District:</label>
+        <input asp-for="District" class="form-control" required />
+        <span asp-validation-for="District" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label>VDC:</label>
+        <input asp-for="VDC" class="form-control" required />
+        <span asp-validation-for="VDC" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
